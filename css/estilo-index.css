@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
+
+
+/* ===== 1. (NUEVO) PALETA DE COLOR "VERDE COMUNITARIO" ===== */
+/* Aquí redefinimos el color primario de Bootstrap */
+:root {
+  --bs-primary: #198754;       /* Verde principal (Botones, links, iconos) */
+  --bs-primary-rgb: 25, 135, 84; /* Versión RGB para opacidad */
+    --color-primary-dark: #27374D; /* Azul oscuro/negro para texto y botones */
+    --color-background-light: #ffffff; /* Blanco */
+    --color-background-accent: #d9eef7; /* Azul claro de fondo */
+    --color-text-primary: #27374D;
+    --color-text-secondary: #555;
+    --font-family-main: 'Poppins', sans-serif;
+}
+
+/* Sobrescribir clases de Bootstrap para que usen nuestro verde */
+/* Esto arregla botones, textos y fondos azules */
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #157347; /* Un verde un poco más oscuro */
+  --bs-btn-hover-border-color: #157347;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+}
+
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+/* ======================================================== */
+
+
+/* ===== 2. FONDO LIMPIO Y ESTÁTICO ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo estático gris claro */
+    min-height: 100vh;
+}
+
+/* ===== 3. SECCIONES BLANCAS ===== */
+.seccion-anuncios {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* ===== 4. TARJETAS DEL DASHBOARD (Ahora usarán el verde) ===== */
+.card-portal {
+    text-decoration: none; 
+    color: #333;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%; 
+    border: none;
+}
+
+/* Al pasar el mouse, el texto se pone verde */
+.card-portal:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    color: var(--bs-primary); /* Usa nuestro nuevo verde */
+}
+
+/* Los iconos ahora son verdes */
+.card-portal i {
+    font-size: 3.5rem; 
+    margin-bottom: 15px;
+    color: var(--bs-primary);  /* Usa nuestro nuevo verde */
+    opacity: 0.9;
+}
+
+.card-portal .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.boton{
+  color:white; 
+  background: #0eb180;
+  padding:10px;
+  text-decoration: none;
+  border-radius:150px;
+}
+
+.titulo {
+    font-family: 'Playfair Display', serif; /* La fuente del logo */
+    font-weight: 700; /* Grosor 'bold' (negrita) */
+    font-size: 1.6rem; /* Aumenta el tamaño para que parezca logo */
+    color: #27374D; /* El color oscuro del diseño de ejemplo */
+    font-style: italic;
+}
+
